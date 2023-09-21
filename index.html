@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- credit to chat gpt lmfao-->
+<html>
+<head>
+  <title>Browser Info</title>
+</head>
+<body>
+  <h1>Browser Information</h1>
+  <div id="info"></div>
+
+  <script>
+
+    
+    // Get User Agent
+    const userAgent = navigator.userAgent;
+
+    // Get Window Object Properties
+    const windowProperties = Object.getOwnPropertyNames(window)
+      .map(prop => `${prop}: ${window[prop]}`)
+      .join('<br>');
+
+    // Display Information
+    document.getElementById('info').innerHTML = `
+      <h2>User Agent</h2>
+      <p>${userAgent}</p>
+      <h2>Window Properties</h2>
+      <p>${windowProperties}</p>
+    `;
+  </script>
+</body>
+</html>
